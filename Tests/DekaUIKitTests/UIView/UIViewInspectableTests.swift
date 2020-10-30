@@ -8,6 +8,6 @@ final class UIViewInspectableTests: XCTestCase {
         let view = UIView()
         view.cornerRadius = cornerRadius
         
-        XCTAssertEqual(view.layer.cornerRadius, cornerRadius)
+        XCTAssertEqual(view.layer.cornerRadius, CGFloat(32))
     }
 }
