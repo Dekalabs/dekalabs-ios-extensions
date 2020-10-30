@@ -1,0 +1,7 @@
+language: objective-c
+osx_image: xcode12
+script:
+  - xcodebuild -scheme DekaExtensions-Package -destination 'platform=iOS Simulator,OS=14.1,name=iPhone 12' test
+branches:
+  only:
+  - develop
