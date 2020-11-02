@@ -1,3 +1,10 @@
+//
+//  File.swift
+//
+//
+//  Created by Ginés Navarro Fernández on 02/11/2020.
+//
+
 import XCTest
 @testable import DekaUIKit
 
