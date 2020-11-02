@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    func fadeAnimationAlpha(hide: Bool, duration: Double = 0.3) {
+    public func fadeAnimationAlpha(hide: Bool, duration: Double = 0.3) {
         if hide && !isHidden {
             UIView.animate(withDuration: duration, animations: {
                 self.alpha = 0
@@ -27,7 +27,7 @@ extension UIView {
         }
     }
     
-    func fadeAnimationHidden(hide: Bool, duration: Double = 0.3) {
+    public func fadeAnimationHidden(hide: Bool, duration: Double = 0.3) {
         if hide && !isHidden {
             UIView.animate(withDuration: duration) {
                 self.isHidden = hide

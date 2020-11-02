@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    func addSubviewOccupingWholeSpace(view: UIView, to topLayoutGuide: UILayoutSupport) {
+    public func addSubviewOccupingWholeSpace(view: UIView, to topLayoutGuide: UILayoutSupport) {
         if view.superview == self {
             view.removeFromSuperview()
         }
@@ -25,7 +25,7 @@ extension UIView {
         addConstraints(constraints)
     }
     
-    func addSubviewOccupingWholeSpace(view: UIView) {
+    public func addSubviewOccupingWholeSpace(view: UIView) {
         if view.superview == self {
             view.removeFromSuperview()
         }

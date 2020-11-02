@@ -10,7 +10,8 @@ import CoreGraphics
 
 extension UIView {
     
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable
+    public var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -19,7 +20,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable
+    public var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -28,7 +30,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var borderColor: UIColor {
+    @IBInspectable
+    public var borderColor: UIColor {
         get {
             guard let color = layer.borderColor else {
                 return .black
@@ -40,7 +43,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowColor: UIColor {
+    @IBInspectable
+    public var shadowColor: UIColor {
         get {
             guard let color = layer.shadowColor else {
                 return .black
@@ -52,7 +56,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowRadius: CGFloat {
+    @IBInspectable
+    public var shadowRadius: CGFloat {
         get {
             return layer.shadowRadius
         }
@@ -61,7 +66,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowOpacity: Float {
+    @IBInspectable
+    public var shadowOpacity: Float {
         get {
             return layer.shadowOpacity
         }
@@ -70,7 +76,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowOffsetWidth: CGFloat {
+    @IBInspectable
+    public var shadowOffsetWidth: CGFloat {
         get {
             return layer.shadowOffset.width
         }
@@ -79,7 +86,8 @@ extension UIView {
         }
     }
     
-    @IBInspectable var shadowOffsetHeight: CGFloat {
+    @IBInspectable
+    public var shadowOffsetHeight: CGFloat {
         get {
             return layer.shadowOffset.height
         }

@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    func createImage() -> UIImage? {
+    public func createImage() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(bounds.size, isOpaque, 0.0)
         drawHierarchy(in: bounds, afterScreenUpdates: false)
         let snapshotImage = UIGraphicsGetImageFromCurrentImageContext()
