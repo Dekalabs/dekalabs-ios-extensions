@@ -5,5 +5,9 @@ script:
 branches:
   only:
   - develop
+  - \d+\.\d+(\.\d+)?(-\S*)?$/
 notifications:
-  slack: dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#tech_ios
+  slack: 
+    if: branch = \d+\.\d+(\.\d+)?(-\S*)?$/
+    rooms:
+      dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#tech_ios
