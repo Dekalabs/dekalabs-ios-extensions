@@ -5,10 +5,10 @@ script:
 branches:
   only:
   - develop
-  - \d+\.\d+(\.\d+)?(-\S*)?$/
+  - /\d+\.\d+(\.\d+)?(-\S*)?$/
 notifications:
   slack: 
-    if: branch = \d+\.\d+(\.\d+)?(-\S*)?$/
+    if: tag IS present
     rooms:
       dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#tech_ios
     template:
