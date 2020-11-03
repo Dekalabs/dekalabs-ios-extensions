@@ -5,3 +5,7 @@ script:
 branches:
   only:
   - develop
+notifications:
+  slack:
+    rooms:
+	  - dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#tech_ios
