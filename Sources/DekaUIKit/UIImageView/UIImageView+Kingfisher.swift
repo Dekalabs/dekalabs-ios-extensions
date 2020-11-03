@@ -11,11 +11,11 @@ import os.log
 
 extension UIImageView {
     
-    func setImage(with string: String?,
-                  placeholder: UIImage? = nil,
-                  referenceSize: CGSize = CGSize(width: UIScreen.main.bounds.width * UIScreen.main.scale,
-                                                 height: UIScreen.main.bounds.height * UIScreen.main.scale),
-                  completion: @escaping () -> Void = {}) {
+    public func setImage(with string: String?,
+                         placeholder: UIImage? = nil,
+                         referenceSize: CGSize = CGSize(width: UIScreen.main.bounds.width * UIScreen.main.scale,
+                                                        height: UIScreen.main.bounds.height * UIScreen.main.scale),
+                         completion: @escaping () -> Void = {}) {
         guard let string = string else {
             if let i = placeholder { image = i }
             completion()
