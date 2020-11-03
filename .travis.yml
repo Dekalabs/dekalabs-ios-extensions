@@ -1,7 +1,6 @@
 language: objective-c
 osx_image: xcode12
 script:
-  if: branch = develop
   - xcodebuild -scheme DekaExtensions-Package -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11' test
 branches:
   only:
