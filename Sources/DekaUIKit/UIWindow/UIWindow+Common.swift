@@ -9,7 +9,7 @@ import UIKit
 
 extension UIWindow {
     
-    func setRootViewController(_ controller: UIViewController,
+    public func setRootViewController(_ controller: UIViewController,
                                animationOptions: UIView.AnimationOptions?,
                                duration: Double = 0.33) {
         if let animationOptions = animationOptions, rootViewController != nil {

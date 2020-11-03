@@ -9,7 +9,7 @@ import UIKit
 
 extension UINavigationBar {
     
-    func setClear() {
+    public func setClear() {
         backgroundColor = .clear
         setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
         shadowImage = UIImage()
