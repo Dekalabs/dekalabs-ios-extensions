@@ -1,6 +1,7 @@
 language: objective-c
 osx_image: xcode12
 script:
+  if: branch = develop
   - xcodebuild -scheme DekaExtensions-Package -destination 'platform=iOS Simulator,OS=14.0,name=iPhone 11' test
 branches:
   only:
@@ -12,5 +13,5 @@ notifications:
     rooms:
       dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#tech_ios
     template:
-      - "%{repository_slug} (%{commit}) : %{message}, by %{author}"
-      - "New Version Released: %{tag}"
+      - "%{repository_slug} (%{commit}) : %{message} by %{author}"
+      - "New Version Released: $TRAVIS_TAG"
