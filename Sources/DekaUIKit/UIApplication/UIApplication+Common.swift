@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import os.log
 
 extension UIApplication {
     
@@ -17,5 +18,19 @@ extension UIApplication {
             }
         }
         return false
+    }
+    
+    public func call(number: String?) {
+        guard let value = number else {
+            os_log(.default, "No number")
+            return
+        }
+        
+        guard let numberURL = URL(string: "tel://" + value.replacingOccurrences(of: " ", with: "")) else {
+            os_log(.default, "Can't create URL for number: %@", value)
+            return
+        }
+        
+        open(numberURL, options: [:], completionHandler: nil)
     }
 }

@@ -10,9 +10,9 @@ import MessageUI
 
 extension UIViewController {
     
-    public func shareWithMail(to email: String,
-                              subject: String? = nil,
-                              body: String? = nil) -> MFMailComposeViewController? {
+    public func openMail(to email: String,
+                         subject: String? = nil,
+                         body: String? = nil) -> MFMailComposeViewController? {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.setToRecipients([email])
