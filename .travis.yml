@@ -7,13 +7,12 @@ script:
 branches:
   only:
   - develop
-  - main
   - /\d+\.\d+(\.\d+)?(-\S*)?$/
 notifications:
   slack: 
-    # if: tag IS present
-    rooms: dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#travis_ci
+    if: tag IS present
+    rooms: dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#tech_ios
     template:
-      - "%{repository_slug} (%{commit}) : %{message} by %{author}. Version $TRAVIS_TAG, %{build_number}, %{build_id}, %{build_url}, %{branch}"
+      - "%{repository_slug} (%{commit}) : %{message} by %{author}."
       - "New Version Released"
-      - "$TRAVIS_TAG"
+
