@@ -7,7 +7,7 @@ script:
 branches:
   only:
   - develop
-  - main
+  - main # remove
   - /\d+\.\d+(\.\d+)?(-\S*)?$/
 notifications:
   slack: 
@@ -15,4 +15,5 @@ notifications:
     rooms: dekalabs:5fKxbA5KgdU9mKMZkM1Ff5nb#travis_ci
     template:
       - "%{repository_slug} (%{commit}) : %{message} by %{author}. Version $TRAVIS_TAG, %{build_number}, %{build_id}, %{build_url}, %{branch}"
-      - "New Version Released: $TRAVIS_TAG"
+      - "New Version Released:" $TRAVIS_TAG
+      
