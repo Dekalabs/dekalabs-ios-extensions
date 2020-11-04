@@ -13,8 +13,7 @@ extension UIImageView {
     
     public func setImage(with string: String?,
                          placeholder: UIImage? = nil,
-                         referenceSize: CGSize = CGSize(width: UIScreen.main.bounds.width * UIScreen.main.scale,
-                                                        height: UIScreen.main.bounds.height * UIScreen.main.scale),
+                         resize: Bool = true,
                          completion: @escaping () -> Void = {}) {
         guard let string = string else {
             if let i = placeholder { image = i }
@@ -30,9 +29,13 @@ extension UIImageView {
         }
         
         var options = KingfisherOptionsInfo()
-        let resizingImageProcessor = ResizingImageProcessor(referenceSize: referenceSize,
-                                                            mode: .aspectFit)
-        options.append(.processor(resizingImageProcessor))
+        if resize {
+            let scale = UIScreen.main.scale
+            let referenceSize = CGSize(width: frame.width * scale, height: frame.height * scale)
+            let resizingImageProcessor = ResizingImageProcessor(referenceSize: referenceSize,
+                                                                mode: .aspectFit)
+            options.append(.processor(resizingImageProcessor))
+        }
         
         kf.setImage(with: url, placeholder: placeholder, options: options, completionHandler:  { result in
             completion()
