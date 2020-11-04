@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import DekaFundation
+@testable import DekaFoundation
 
 final class URLComponentsCommonTest: XCTestCase {
     

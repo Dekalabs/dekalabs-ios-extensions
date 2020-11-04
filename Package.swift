@@ -17,8 +17,8 @@ let package = Package(
             name: "DekaUIKit",
             targets: ["DekaUIKit"]),
         .library(
-            name: "DekaFundation",
-            targets: ["DekaFundation"]),
+            name: "DekaFoundation",
+            targets: ["DekaFoundation"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -34,7 +34,7 @@ let package = Package(
             name: "DekaUIKit",
             dependencies: ["Kingfisher"]),
         .target(
-            name: "DekaFundation",
+            name: "DekaFoundation",
             dependencies: []),
         .testTarget(
             name: "StandardLibraryTests",
@@ -43,7 +43,7 @@ let package = Package(
             name: "DekaUIKitTests",
             dependencies: ["DekaUIKit"]),
         .testTarget(
-            name: "DekaFundationTests",
-            dependencies: ["DekaFundation"]),
+            name: "DekaFoundationTests",
+            dependencies: ["DekaFoundation"]),
     ]
 )
