@@ -9,7 +9,7 @@ import UIKit
 
 extension String {
     
-    func generateQRCode(scale: CGFloat = 8) -> UIImage? {
+    public func generateQRCode(scale: CGFloat = 8) -> UIImage? {
         guard let data = self.data(using: String.Encoding.ascii) else {
             return nil
         }
