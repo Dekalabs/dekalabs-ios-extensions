@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import StandardLibrary
+@testable import DekaStandardLibrary
 
 final class ArrayCommonTests: XCTestCase {
     

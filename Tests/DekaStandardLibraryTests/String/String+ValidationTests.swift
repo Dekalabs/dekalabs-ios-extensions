@@ -7,7 +7,7 @@
 
 import Foundation
 import XCTest
-@testable import StandardLibrary
+@testable import DekaStandardLibrary
 
 final class StringValidationTests: XCTestCase {
     
