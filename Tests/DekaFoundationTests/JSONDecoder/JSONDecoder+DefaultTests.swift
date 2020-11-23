@@ -10,12 +10,12 @@ import XCTest
 
 final class JSONDecoderDefaultTest: XCTestCase {
     
-    func testDecodeDate() {
+    func testDecodeDateDefault() {
         struct Item: Decodable {
             let date: Date
         }
         
-        let dataString = "{\"date\" : \"05/16/1986 03:01:02\"}"
+        let dataString = "{\"date\" : \"2020-09-19T14:16:42Z\"}"
         let data = dataString.data(using: .utf8)!
         
         let jsonDecoder = JSONDecoder.default()
@@ -27,7 +27,7 @@ final class JSONDecoderDefaultTest: XCTestCase {
         formatter.timeZone = TimeZone(secondsFromGMT: 0) // UTC
         let stringItemDate = formatter.string(from: item.date)
         
-        XCTAssertEqual(stringItemDate, "05/16/1986 03:01:02")
+        XCTAssertEqual(stringItemDate, "09/19/2020 14:16:42")
     }
     
     func testDecodeCustomDateFormatter() {

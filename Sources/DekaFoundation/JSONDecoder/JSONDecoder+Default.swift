@@ -10,8 +10,8 @@ import os.log
 
 extension JSONDecoder {
 
-    public static func `default`(decodeDateFormat: String = "MM/dd/yyyy HH:mm:ss",
-                                 alternativeDecodeDateFormat: String = "yyyy-MM-dd HH:mm:ss") -> JSONDecoder {
+    public static func `default`(decodeDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'",
+                                 alternativeDecodeDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss'Z'") -> JSONDecoder {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .custom({ (decoder) -> Date in
             let container = try decoder.singleValueContainer()
