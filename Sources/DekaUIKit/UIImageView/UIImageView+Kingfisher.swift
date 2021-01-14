@@ -16,14 +16,22 @@ extension UIImageView {
                          resize: Bool = true,
                          completion: @escaping () -> Void = {}) {
         guard let string = string else {
-            if let i = placeholder { image = i }
+            if let i = placeholder {
+                image = i
+            } else {
+                image = nil
+            }
             completion()
             return
         }
         
         guard let url = URL(string: string) else {
             os_log(.default, "No valid URL: %@", string)
-            if let i = placeholder { image = i }
+            if let i = placeholder {
+                image = i
+            } else {
+                image = nil
+            }
             completion()
             return
         }
