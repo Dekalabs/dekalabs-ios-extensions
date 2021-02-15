@@ -24,7 +24,7 @@ final class UILabelHTMLTests: XCTestCase {
         let label = UILabel()
         label.setHTMLFromString(text: validHTML)
         
-        XCTAssertEqual(label.text, "My First Heading\n")
+        XCTAssertEqual(label.text, "My First Heading")
     }
     
     func testTextPlain() {
@@ -47,6 +47,6 @@ final class UILabelHTMLTests: XCTestCase {
         let label = UILabel()
         label.setHTMLFromString(text: invalidHTML)
         
-        XCTAssertEqual(label.text, "My First Heading\n")
+        XCTAssertEqual(label.text, "My First Heading")
     }
 }
