@@ -9,12 +9,14 @@ import Foundation
 import os.log
 
 extension URLComponents {
-    
-    public static func urlWith(scheme: String = "https", host: String, path: String) -> String {
+    public static func urlWith(scheme: String = "https", port: Int? = nil, host: String, path: String) -> String {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
         components.path = path
+        if let port = port {
+            components.port = port
+        }
         
         if let url = components.string {
             return url
