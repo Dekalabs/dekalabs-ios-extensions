@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 04/11/2020.
-//
-
 import Foundation
 
 extension Bundle {
-    
     public enum BundlePlistError: Swift.Error {
         case missingKey, invalidValue
     }

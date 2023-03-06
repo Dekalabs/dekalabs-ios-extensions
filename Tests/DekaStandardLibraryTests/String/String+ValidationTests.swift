@@ -52,4 +52,34 @@ final class StringValidationTests: XCTestCase {
         
         XCTAssertEqual(string.replace(string: ",", for: "."), ".Test.String.")
     }
+
+    func testValidPassword() {
+        let password = "testtes1"
+
+        XCTAssertTrue(password.isValidPassword())
+    }
+
+    func testPasswordWithoutNumbers() {
+        let password = "testtest"
+
+        XCTAssertFalse(password.isValidPassword())
+    }
+
+    func testPasswordWithoutLetters() {
+        let password = "12345678"
+
+        XCTAssertFalse(password.isValidPassword())
+    }
+
+    func testShortPassword() {
+        let password = "test123"
+
+        XCTAssertFalse(password.isValidPassword())
+    }
+
+    func testEmptyPassword() {
+        let password = ""
+
+        XCTAssertFalse(password.isValidPassword())
+    }
 }

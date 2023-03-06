@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 10/11/2020.
-//
-
 import UIKit
 
 extension String {
-    
     public func generateQRCode(scale: CGFloat = 8) -> UIImage? {
         guard let data = self.data(using: String.Encoding.ascii) else {
             return nil
@@ -42,5 +34,4 @@ extension String {
         
         return nil
     }
-    
 }

@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 11/11/2020.
-//
-
 import Foundation
 
 extension Encodable {
-    
     public func dictionary(decodeDateFormat: String = "MM/dd/yyyy HH:mm:ss") -> [String: Any]? {
         let jsonEncoder = JSONEncoder()
         

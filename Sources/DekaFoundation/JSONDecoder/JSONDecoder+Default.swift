@@ -1,15 +1,7 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 04/11/2020.
-//
-
 import Foundation
 import os.log
 
 extension JSONDecoder {
-
     public static func `default`(decodeDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'",
                                  alternativeDecodeDateFormat: String = "yyyy-MM-dd'T'HH:mm:ss'Z'") -> JSONDecoder {
         let jsonDecoder = JSONDecoder()

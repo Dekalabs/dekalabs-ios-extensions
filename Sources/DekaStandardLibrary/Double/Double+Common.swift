@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 10/11/2020.
-//
-
 import Foundation
 
-extension Double {
-    
+extension Double {    
     public func toInt() -> Int? {
         if self >= Double(Int.min) && self < Double(Int.max) {
             return Int(self)

@@ -1,15 +1,7 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 10/11/2020.
-//
-
 import Foundation
 import UIKit
 
 extension String {
-    
     public func isValidEmail(strict: Bool = false) -> Bool {
         let emailRegex: String
         if strict {
@@ -27,5 +19,14 @@ extension String {
     
     public func size(font: UIFont) -> CGSize {
         return (self as NSString).size(withAttributes: [NSAttributedString.Key.font: font])
+    }
+
+    public func isValidPassword() -> Bool {
+        guard let regex = try? NSRegularExpression(
+            pattern: "^(?=.*?[A-Za-z])(?=.*?[0-9]).{8,}$"
+        ) else {
+            return false
+        }
+        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: utf16.count)) != nil
     }
 }

@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 02/11/2020.
-//
-
 import UIKit
 
 extension UIView {
-    
     public func fadeAnimationAlpha(hide: Bool, duration: Double = 0.3) {
         if hide && !isHidden {
             UIView.animate(withDuration: duration, animations: {

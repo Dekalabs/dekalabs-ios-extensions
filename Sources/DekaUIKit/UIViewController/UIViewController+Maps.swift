@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 03/11/2020.
-//
-
 import Foundation
 import MapKit
 
@@ -75,7 +68,6 @@ public enum MapsApp {
 }
 
 extension UIViewController {
-    
     public func openOnAvailableMapApps(location: CLLocationCoordinate2D,
                                        markerTitle: String,
                                        actionSheetTitle: String? = nil,

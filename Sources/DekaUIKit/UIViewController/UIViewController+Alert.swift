@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 03/11/2020.
-//
-
 import UIKit
 
 extension UIViewController {
-    
     public func showAlert(message: String,
                           title: String? = nil,
                           acceptText: String = NSLocalizedString("ALERT_ACCEPT", comment: ""),

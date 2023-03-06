@@ -1,16 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 03/11/2020.
-//
-
 import UIKit
 import Kingfisher
 import os.log
 
 extension UIImageView {
-    
     public func setImage(with string: String?,
                          placeholder: UIImage? = nil,
                          resize: Bool = true,

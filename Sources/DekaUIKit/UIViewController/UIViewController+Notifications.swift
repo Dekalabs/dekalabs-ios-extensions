@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 03/11/2020.
-//
-
 import UIKit
 
 extension UIViewController {
-    
     public func addNotificationWillResignActive() {
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(willResignActive), name: UIApplication.willResignActiveNotification, object: nil)

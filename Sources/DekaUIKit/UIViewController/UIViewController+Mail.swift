@@ -1,15 +1,7 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 03/11/2020.
-//
-
 import UIKit
 import MessageUI
 
 extension UIViewController {
-    
     public func openMail(to email: String,
                          subject: String? = nil,
                          body: String? = nil) -> MFMailComposeViewController? {

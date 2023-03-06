@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 10/11/2020.
-//
-
 import Foundation
 
 extension String {
-
     public func toDictionary(encoding: Encoding = .utf8) -> [String: Any]? {
         if let data = self.data(using: encoding) {
             do {

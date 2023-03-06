@@ -1,14 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 02/11/2020.
-//
-
 import UIKit
 
 extension UIStackView {
-    
     @IBInspectable
     public var stackBackgroundColor: UIColor? {
         get {

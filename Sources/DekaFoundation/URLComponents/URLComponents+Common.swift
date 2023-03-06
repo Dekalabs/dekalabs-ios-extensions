@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Ginés Navarro Fernández on 04/11/2020.
-//
-
 import Foundation
 import os.log
 
@@ -24,5 +17,21 @@ extension URLComponents {
             os_log(.default, "No valid URL to: %@, %@, %@", scheme, host, path)
             return ""
         }
+    }
+
+    public static func url(scheme: String = "https", port: Int? = nil, host: String, path: String) -> URL? {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = path
+        if let port = port {
+            components.port = port
+        }
+
+        guard let url = components.url else {
+            os_log(.default, "No valid URL to: %@, %@, %@", scheme, host, path)
+            return nil
+        }
+        return url
     }
 }
