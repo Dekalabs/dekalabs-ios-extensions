@@ -17,6 +17,28 @@ extension String {
             attributes: [NSAttributedString.Key.font: font])
         return attributedText
     }
+
+    public func withKern(kern: CGFloat) -> NSMutableAttributedString {
+        let attributedText = NSMutableAttributedString(string: self, attributes: [NSAttributedString.Key.kern : kern])
+        return attributedText
+    }
+
+    public func underlined() -> NSMutableAttributedString {
+        let attributedText = NSMutableAttributedString(string: self, attributes: [NSAttributedString.Key.underlineStyle : NSUnderlineStyle.single.rawValue])
+        return attributedText
+    }
+
+    public func withLineSpacing(spacing: CGFloat) -> NSMutableAttributedString {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = spacing
+        let attributedText = NSMutableAttributedString(string: self, attributes: [NSAttributedString.Key.paragraphStyle : paragraphStyle])
+        return attributedText
+    }
+
+    public func withColor(color: UIColor) -> NSMutableAttributedString {
+        let attributedText = NSMutableAttributedString(string: self, attributes: [NSAttributedString.Key.foregroundColor : color])
+        return attributedText
+    }
 }
 
 extension NSMutableAttributedString {
